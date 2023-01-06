@@ -1,0 +1,35 @@
+{
+  "name": "salesfore_canvas_demo",
+  "version": "0.0.1",
+  "description": "Salesforce Canvas Demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Node.Js",
+    "Canvas App",
+    "Salesforce"
+  ],
+  "author": "Jitendra Zaa",
+  "license": "MIT",
+  "dependencies": {
+    "@salesforce/canvas-js-sdk": "^1.41.0",
+    "base64-url": "^2.3.3",
+    "body-parser": "^1.20.1",
+    "crypto-js": "^3.1.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "http": "~0.0.0",
+    "path": "^0.12.7",
+    "request": "^2.88.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
