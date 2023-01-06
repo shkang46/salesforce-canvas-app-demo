@@ -1,0 +1,30 @@
+<apex:page standardController="Account">
+	<html>
+	<script type="text/javascript" src="https://i2max-20b-dev-ed.my.salesforce.com/canvas/sdk/js/30.0/controller.js"></script>
+
+	<head>
+
+	</head>
+
+	<body>
+		<div id="eventTester">
+			<button id="eventTesterButton" type="button">Click Me!</button>
+		</div>
+	</body>
+
+	<script>
+		document.getElementById("eventTesterButton").onclick = () => {
+			Sfdc.canvas.controller.publish({ name: "myevent", payload: { data: 'DATA: SF to APP' } });
+		};
+
+		Sfdc.canvas.controller.subscribe({
+			name: "yourevent",
+			onData: function (e) {
+				console.log(e.data);
+			}
+		});
+	</script>
+
+	</html>
+	<apex:canvasApp canvasId="app1" applicationName="Hello_World" height="2000px" width="750px" />
+</apex:page>
